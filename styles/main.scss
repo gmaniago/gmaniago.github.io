@@ -370,20 +370,16 @@ padding-top:20px;
 	margin-top: 3em;
 	li {
 		list-style: none;
-		float: left;
-		padding-left: 1em;
+		margin: 0;
 	}
 	button {
 		background: $buttonBackground;
 		border: none;
+		padding: 0 auto;
 		height: 2em;
-		margin-top: 1em;
 		width: 10em;
 		outline-color: $buttonBackground;
 		color: white;
-	}
-	h3 {
-		text-align: center;
 	}
 	#shipBtn {
 		margin-left: 30%;
@@ -415,7 +411,6 @@ hr {
 .confirmation-page{
 	margin: 0 auto;
 	margin-top: 3em;
-	margin-left: 3em;
 	text-align: center;
 	img {
 		text-align: center;

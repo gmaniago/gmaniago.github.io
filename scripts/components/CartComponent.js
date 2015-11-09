@@ -50,17 +50,24 @@ module.exports = React.createClass({
           		<ul>
 					<li><a href={'#bookDetails/'+book.id}>{book.get('title')}</a></li><br />	
 					<li>Quantity:{qty}</li><br />
-					<li><button onClick={ this.removeBook.bind(this, book) }>Remove</button></li><br /><br />
-				</ul>
+					<li><button onClick={ this.removeBook.bind(this, book) }>Remove</button></li>
+				</ul><hr />
 			</div>
 			)
         }
         var enableShipping = placements.length > 0;
 		return (		
 				<div className="checkoutCart">
-					<div className="col-sm-6">
-					<h3> Ready to get these on your hands!</h3>
-					{placements}
+					<div className="col-sm-4 col-sm-offset-2">
+					<div className="panel panel-danger panel-pricing">
+						<div className="panel-heading">
+					        <i className="fa fa-desktop"></i>
+					        <h3 className="text-center">Ready to get these on your hands!</h3>
+					    </div>
+					    <div className="list-group">
+					        <div className="list-group-item"><i className="fa fa-check"></i>{placements}</div>
+					    </div>
+						</div>
 					</div>
 					<div className="col-sm-6">
 					{this.shippingButton(enableShipping)}

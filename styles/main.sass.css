@@ -297,18 +297,15 @@ header {
   margin-top: 3em; }
   .checkoutCart li {
     list-style: none;
-    float: left;
-    padding-left: 1em; }
+    margin: 0; }
   .checkoutCart button {
     background: #FF6A44;
     border: none;
+    padding: 0 auto;
     height: 2em;
-    margin-top: 1em;
     width: 10em;
     outline-color: #FF6A44;
     color: white; }
-  .checkoutCart h3 {
-    text-align: center; }
   .checkoutCart #shipBtn {
     margin-left: 30%; }
 
@@ -332,7 +329,6 @@ hr {
 .confirmation-page {
   margin: 0 auto;
   margin-top: 3em;
-  margin-left: 3em;
   text-align: center; }
   .confirmation-page img {
     text-align: center; }

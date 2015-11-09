@@ -32116,10 +32116,9 @@ module.exports = React.createClass({
 							{ onClick: this.removeBook.bind(this, book) },
 							'Remove'
 						)
-					),
-					React.createElement('br', null),
-					React.createElement('br', null)
-				)
+					)
+				),
+				React.createElement('hr', null)
 			));
 		}
 		var enableShipping = placements.length > 0;
@@ -32128,13 +32127,31 @@ module.exports = React.createClass({
 			{ className: 'checkoutCart' },
 			React.createElement(
 				'div',
-				{ className: 'col-sm-6' },
+				{ className: 'col-sm-4 col-sm-offset-2' },
 				React.createElement(
-					'h3',
-					null,
-					' Ready to get these on your hands!'
-				),
-				placements
+					'div',
+					{ className: 'panel panel-danger panel-pricing' },
+					React.createElement(
+						'div',
+						{ className: 'panel-heading' },
+						React.createElement('i', { className: 'fa fa-desktop' }),
+						React.createElement(
+							'h3',
+							{ className: 'text-center' },
+							'Ready to get these on your hands!'
+						)
+					),
+					React.createElement(
+						'div',
+						{ className: 'list-group' },
+						React.createElement(
+							'div',
+							{ className: 'list-group-item' },
+							React.createElement('i', { className: 'fa fa-check' }),
+							placements
+						)
+					)
+				)
 			),
 			React.createElement(
 				'div',
@@ -32221,7 +32238,6 @@ module.exports = React.createClass({
 		var query = new Parse.Query(ShipmentModel);
 		query.get(this.props.shipmentId).then(function (shipment) {
 			var relation = shipment.relation('placements');
-
 			console.log(relation);
 			relation.query().include("book").find({
 				success: function success(placements) {
@@ -32249,17 +32265,39 @@ module.exports = React.createClass({
 				{ className: 'row' },
 				React.createElement(
 					'div',
-					{ className: 'col-md-6' },
+					{ className: 'col-md-5' },
 					React.createElement(
-						'h4',
-						null,
-						'These items are pending shipment:'
-					),
-					renderShipment
+						'div',
+						{ className: 'panel panel-success panel-pricing' },
+						React.createElement(
+							'div',
+							{ className: 'panel-heading' },
+							React.createElement('i', { className: 'fa fa-desktop' }),
+							React.createElement(
+								'h3',
+								{ className: 'text-center' },
+								'Pending Shipments:'
+							)
+						),
+						React.createElement(
+							'ul',
+							{ className: 'list-group text-center' },
+							React.createElement(
+								'li',
+								{ className: 'list-group-item' },
+								React.createElement('i', { className: 'fa fa-check' }),
+								React.createElement(
+									'h4',
+									null,
+									renderShipment
+								)
+							)
+						)
+					)
 				),
 				React.createElement(
 					'div',
-					{ className: 'col-md-6' },
+					{ className: 'col-md-7' },
 					React.createElement(
 						'h2',
 						null,
