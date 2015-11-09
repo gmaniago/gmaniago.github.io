@@ -16,6 +16,7 @@ var LoginComponent = require('./components/LoginComponent.js');
 var RegisterComponent = require('./components/RegisterComponent.js');
 var AddBooksComponent = require('./components/AddBookComponent.js');
 var CartComponent = require('./components/CartComponent.js');
+var ConfirmationComponent = require('./components/ConfirmationComponent.js');
 
 var app = document.getElementById('app');
 
@@ -27,6 +28,7 @@ var Router = Backbone.Router.extend({
 		'browse': 'browse',
 		'addBook': 'addBook',
 		'bookDetails/:id': 'bookDetails',
+		'confirmation/:id': 'confirmation',
 		'cart': 'cart'
 	},
 	home: function() {
@@ -44,6 +46,12 @@ var Router = Backbone.Router.extend({
 	addBook: function() {
 	ReactDOM.render(
 			<AddBooksComponent router={r} />, 
+			app
+		);
+	},
+	confirmation: function(id) {
+	ReactDOM.render(
+			<ConfirmationComponent router={r} shipmentId={id}/>, 
 			app
 		);
 	},

@@ -13,16 +13,24 @@ module.exports = React.createClass({
 			);
 		}
 		return (
-			<div className="loginPage">
-				<form className="form" onSubmit={this.onLogin}>
-					<h2 className="logRegister">Log In</h2>
-					<input type="text" ref="username" placeholder="username" />
-					<br />
-					<input type="password" ref="password" placeholder="password" />
-					<br />
-					<button>Log In</button>
-					{hasError}
-				</form>
+			<div className="container-fluid loginPage">
+				<div className="row">
+					<div className="col-sm-4">
+					</div>
+					<div className="col-sm-4">
+						<form className="form" onSubmit={this.onLogin}>
+							<h2 className="logRegister">Log In</h2>
+							<input type="text" ref="username" placeholder="username" />
+							<br />
+							<input type="password" ref="password" placeholder="password" />
+							<br />
+							<button>Log In</button>
+							{hasError}
+						</form>
+					</div>
+					<div className="col-sm-4">
+					</div>
+				</div>
 			</div>
 			)
 	},

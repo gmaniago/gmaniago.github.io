@@ -1,0 +1,48 @@
+.homeContent{
+	background: #F5D76E;
+	width: 100%;
+	height: 40em;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #fff;
+	h1 {
+		padding-top: 14%;
+		padding-left: 15%;
+		font-family: $fontFamily;
+	}
+	h3 {
+		padding-left: 15%;
+		font-family: $fontFamily;	
+	}
+	h4 {
+		padding-left: 15%;
+	}
+}
+.freeMonth {
+	color: #fff;
+	text-decoration: underline;
+}
+
+.navbar {
+	margin-bottom: 0;
+}
+
+.links {
+	li {
+		text-decoration: none;
+		list-style: none;
+		float: right;
+		padding-left: 4%;
+		padding-right: 4%;
+		font-size: 1.5em;
+		padding-top: 1.5em;
+	}
+}
+
+.logoLine {
+		padding-left: 2%;
+		font-size: 1.5em;
+		height: 3em;
+		padding-top: 1.5em;
+
+}

@@ -4,7 +4,6 @@ var BooksModel = require('../models/BooksModel.js');
 
 
 module.exports = React.createClass({
-
 	render: function() {
 		return (
 			<div>			
@@ -21,7 +20,7 @@ module.exports = React.createClass({
 					<button>Add Book</button>
 				</form>
 			</div>
-			)
+		)
 	},
 	onAddBook: function(e) {
 		e.preventDefault();
@@ -31,13 +30,9 @@ module.exports = React.createClass({
 			image: this.refs.image.value,
 			author: this.refs.author.value,
 		});
-
 		newBook.save();
-		console.log('book saved')
 		this.props.router.navigate('', {trigger: true});
 	}
-
-
 })
 
 

@@ -13,25 +13,41 @@ module.exports = React.createClass({
 			);
 		}
 		return (
-			<div className="registerBox">
-				<h2>Register Here</h2>
-				<form className="form" onSubmit={this.onRegister}>
-					<input type="text" ref="username" placeholder="UserName" /><br />
-					<input type="email" ref="email" placeholder="Email Address" />
-					<br />
-					<input type="password" ref="password" placeholder="Password" />
-					<br />
-					<input type="text" ref="streetAddress" placeholder="street address" />
-					<br />
-					<input type="text" ref="city" placeholder="city" />
-					<br />
-					<input type="number" ref="zipcode" placeholder="zip code" />
-					<br />
-					<input type="text" ref="state" placeholder="state" />
-					<br />
-					<button>Register</button>
-					{hasError}
-				</form>
+			<div className="container-fluid">
+				<div className="row">
+					<div className="col-md-4">
+					</div>
+						<div className="col-md-4 registerBox">
+							<form className="form" onSubmit={this.onRegister}>
+								<h2>Register Here</h2>
+								<input type="text" ref="username" placeholder="UserName" /><br />
+								<input type="email" ref="email" placeholder="Email Address" />
+								<br />
+								<input type="password" ref="password" placeholder="Password" />
+								<br />
+								<input type="text" ref="streetAddress" placeholder="street address" />
+								<br />
+								<input type="text" ref="city" placeholder="city" />
+								<br />
+								<input type="number" ref="zipcode" placeholder="zip code" />
+								<br />
+								<input type="text" ref="state" placeholder="state" />
+								<br />
+								<select className="select form-control">
+									<option value="First Choice">
+									Plan 1
+									</option>
+									<option value="Second Choice">
+									Plan 2
+									</option>
+								</select>
+								<button>Register</button>
+								{hasError}
+							</form>
+						</div>
+					<div className="col-md-4 registerBox">
+					</div>
+				</div>
 			</div>
 			)
 	},
@@ -73,5 +89,22 @@ module.exports = React.createClass({
 
 })
 
-
+								// <input type="number" ref="cardName" placeholder="name on card" />
+								// <br />
+								// <input type="text" ref="creditNumber" placeholder="card number" />
+								// <br />
+								// <select className="select form-control">
+								// 	<option value="First Choice">
+								// 	Visa
+								// 	</option>
+								// 	<option value="Second Choice">
+								// 	Mastercard
+								// 	</option>
+								// 	<option value="Third Choice">
+								// 	Amex
+								// 	</option>
+								// 	<option value="Fourth Choice">
+								// 	Discover
+								// 	</option>
+								// </select>
 
