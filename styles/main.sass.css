@@ -116,7 +116,8 @@ div.registerBox {
       outline-color: #F5D76E;
       color: black; }
     div.registerBox form p {
-      color: white; }
+      color: red;
+      padding-left: 2em; }
     div.registerBox form h2 {
       text-align: center; }
 
@@ -146,7 +147,8 @@ div.registerBox {
       outline-color: #F5D76E;
       color: black; }
     .loginPage form p {
-      color: white; }
+      color: red;
+      padding-left: 2em; }
     .loginPage form h2 {
       text-align: center; }
 

@@ -25,7 +25,7 @@ module.exports = React.createClass({
 							<input type="password" ref="password" placeholder="password" />
 							<br />
 							<button>Log In</button>
-							{hasError}
+							<p>{hasError}</p>
 						</form>
 					</div>
 					<div className="col-sm-4">

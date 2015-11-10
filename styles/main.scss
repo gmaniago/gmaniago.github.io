@@ -135,7 +135,8 @@ div.registerBox{
 			color: black;
 		}
 		p {
-			color: white;
+			color: red;
+			padding-left:2em;
 		}
 		h2{
 			text-align: center;
@@ -176,7 +177,8 @@ div.registerBox{
 			color: black;
 		}
 		p {
-			color: white;
+			color: red;
+			padding-left:2em;
 		}
 		h2{
 			text-align: center;
@@ -196,9 +198,6 @@ div.registerBox{
 .panel-pricing:hover {
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
 }
-// .panel-pricing .panel-heading {
-//   padding: 10px 10px;
-// }
 .panel-pricing .panel-heading .fa {
   margin-top: 10px;
   font-size: 58px;

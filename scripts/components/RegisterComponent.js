@@ -42,7 +42,7 @@ module.exports = React.createClass({
 									</option>
 								</select>
 								<button>Register</button>
-								{hasError}
+								<p>{hasError}</p>
 							</form>
 						</div>
 					<div className="col-md-4 registerBox">

@@ -9,13 +9,13 @@ module.exports = React.createClass({
 					<div id="wrapper" className="heroContent">
 					    <header className="hero">
 					      	<h1>Paper<span id="heroBack">Back</span></h1>
+					      		<h3>We are a book rental website that gives you unlimited access to titles.</h3>
 								<h3>With PaperBack you will be able to explore a vast library of books.</h3>			
 								<p className="centered">
 									<a className="btn" href="#register">Start your free month.</a>
 								</p>
 						</header>
 					</div>
-
 					<div className="container-fluid">
 						<div className="row">
 							<div className="col-md-4 gifs">

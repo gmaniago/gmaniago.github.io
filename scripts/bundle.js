@@ -32181,7 +32181,7 @@ module.exports = React.createClass({
 				React.createElement(
 					'h3',
 					null,
-					'You have no books on your cart yet.'
+					'You have no books on your cart yet. Please make a selection.'
 				),
 				React.createElement(
 					'a',
@@ -32235,23 +32235,6 @@ module.exports = React.createClass({
 	}
 
 });
-
-// <div>{this.shippingButton(enableShipping)}</div>
-// {placements}
-
-// <tr class="warning">
-// 			        <td><a href={'#bookDetails/'+book.id}>{book.get('title')}</a></td>	
-// 					<td>Quantity:{qty}</td>
-// 			        <td><button onClick={ this.removeBook.bind(this, book) }>Remove</button></td>
-// 		     	 </tr><hr />
-
-// 	        <div id={book.id}>      
-// 		      	<tr class="warning">
-// 			        <td><a href={'#bookDetails/'+book.id}>{book.get('title')}</a></td>	
-// 					<td>Quantity:{qty}</td>
-// 			        <td><button onClick={ this.removeBook.bind(this, book) }>Remove</button></td>
-// 		     	 </tr><hr />
-// 		    </div>
 
 },{"../models/BooksModel":172,"../models/CartPlacementModel.js":173,"../models/ShipmentModel.js":174,"../models/UserModel":175,"jquery":4,"react":160,"react-dom":5}],165:[function(require,module,exports){
 'use strict';
@@ -32410,6 +32393,11 @@ module.exports = React.createClass({
 							{ id: 'heroBack' },
 							'Back'
 						)
+					),
+					React.createElement(
+						'h3',
+						null,
+						'We are a book rental website that gives you unlimited access to titles.'
 					),
 					React.createElement(
 						'h3',
@@ -32745,7 +32733,11 @@ module.exports = React.createClass({
 							null,
 							'Log In'
 						),
-						hasError
+						React.createElement(
+							'p',
+							null,
+							hasError
+						)
 					)
 				),
 				React.createElement('div', { className: 'col-sm-4' })
@@ -32931,7 +32923,11 @@ module.exports = React.createClass({
 							null,
 							'Register'
 						),
-						hasError
+						React.createElement(
+							'p',
+							null,
+							hasError
+						)
 					)
 				),
 				React.createElement('div', { className: 'col-md-4 registerBox' })

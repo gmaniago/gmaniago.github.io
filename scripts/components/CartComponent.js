@@ -55,22 +55,22 @@ module.exports = React.createClass({
         }
         var enableShipping = placements.length > 0;
 		return (		
-				<div className="container-fluid col-sm-6 col-sm-offset-3 checkoutCart"> 
-					<h2>Cart</h2>         
-					<table className="table">
-						<thead>
-							<tr>
-								<th>Title</th>
-								<th>Quantity</th>
-								<th>Edit</th>
-							</tr>
-						</thead>
-						<tbody>
-						    {placements}
-						</tbody>
-					</table>
-					<div>{this.shippingButton(enableShipping)}</div>
-				</div>
+			<div className="container-fluid col-sm-6 col-sm-offset-3 checkoutCart"> 
+				<h2>Cart</h2>         
+				<table className="table">
+					<thead>
+						<tr>
+							<th>Title</th>
+							<th>Quantity</th>
+							<th>Edit</th>
+						</tr>
+					</thead>
+					<tbody>
+					    {placements}
+					</tbody>
+				</table>
+				<div>{this.shippingButton(enableShipping)}</div>
+			</div>
 
 		);
 	},
@@ -80,7 +80,7 @@ module.exports = React.createClass({
 		 } else {
                    return (
                    <div className="empty-cart">
-                   		<h3>You have no books on your cart yet.</h3>
+                   		<h3>You have no books on your cart yet. Please make a selection.</h3>
                    		<a href="#browse"><button id="shipBtn">Browse Books</button></a>
                    </div>
                    );
@@ -130,19 +130,3 @@ module.exports = React.createClass({
 });
 
 
-// <div>{this.shippingButton(enableShipping)}</div>
-// {placements}
-
-// <tr class="warning">
-// 			        <td><a href={'#bookDetails/'+book.id}>{book.get('title')}</a></td>	
-// 					<td>Quantity:{qty}</td>
-// 			        <td><button onClick={ this.removeBook.bind(this, book) }>Remove</button></td>
-// 		     	 </tr><hr />
-
-// 	        <div id={book.id}>       
-// 		      	<tr class="warning">
-// 			        <td><a href={'#bookDetails/'+book.id}>{book.get('title')}</a></td>	
-// 					<td>Quantity:{qty}</td>
-// 			        <td><button onClick={ this.removeBook.bind(this, book) }>Remove</button></td>
-// 		     	 </tr><hr />
-// 		    </div>
