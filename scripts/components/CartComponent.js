@@ -45,43 +45,46 @@ module.exports = React.createClass({
           var qty = this.state.placements[book_id].reduce(function(sum, cur) {
           	return cur.get('qty') + sum
           }, 0)
-          placements.push(	
-	        <div id={book.id}>
-          		<ul>
-					<li><a href={'#bookDetails/'+book.id}>{book.get('title')}</a></li><br />	
-					<li>Quantity:{qty}</li><br />
-					<li><button onClick={ this.removeBook.bind(this, book) }>Remove</button></li>
-				</ul><hr />
-			</div>
+          placements.push(	     
+		      	<tr id={book.id} className="warning">
+			        <td><img className="image" src={book.get('image')} height="120px" width="80px"/><br/><a href={'#bookDetails/'+book.id}>{book.get('title')}</a></td>	
+					<td className="needs-padding"><h3>{qty}</h3></td>
+			        <td className="needs-padding"><button onClick={ this.removeBook.bind(this, book) }>Remove</button></td>
+		     	 </tr>
 			)
         }
         var enableShipping = placements.length > 0;
 		return (		
-				<div className="checkoutCart">
-					<div className="col-sm-4 col-sm-offset-2">
-					<div className="panel panel-danger panel-pricing">
-						<div className="panel-heading">
-					        <i className="fa fa-desktop"></i>
-					        <h3 className="text-center">Ready to get these on your hands!</h3>
-					    </div>
-					    <div className="list-group">
-					        <div className="list-group-item"><i className="fa fa-check"></i>{placements}</div>
-					    </div>
-						</div>
-					</div>
-					<div className="col-sm-6">
-					{this.shippingButton(enableShipping)}
-					<br />
-					</div>
-				</div>			
+				<div className="container-fluid col-sm-6 col-sm-offset-3 checkoutCart"> 
+					<h2>Cart</h2>         
+					<table className="table">
+						<thead>
+							<tr>
+								<th>Title</th>
+								<th>Quantity</th>
+								<th>Edit</th>
+							</tr>
+						</thead>
+						<tbody>
+						    {placements}
+						</tbody>
+					</table>
+					<div>{this.shippingButton(enableShipping)}</div>
+				</div>
+
 		);
 	},
     shippingButton: function(enableShipping) {
 		if (enableShipping) {
 		  return <button onClick={this.shipCart} id="shipBtn">Ship my Books</button> 
 		 } else {
-                       return <button onClick={this.shipCart} id="shipBtn" disabled>Ship my Books</button> 
-					 }
+                   return (
+                   <div className="empty-cart">
+                   		<h3>You have no books on your cart yet.</h3>
+                   		<a href="#browse"><button id="shipBtn">Browse Books</button></a>
+                   </div>
+                   );
+				 }
 	},
 	removeBook: function(book) {
 		query.equalTo('user', Parse.User.current());
@@ -122,9 +125,24 @@ module.exports = React.createClass({
 			self.props.router.confirmation(shipment.id);
 			}
 		});
-
-
 	}
 
 });
 
+
+// <div>{this.shippingButton(enableShipping)}</div>
+// {placements}
+
+// <tr class="warning">
+// 			        <td><a href={'#bookDetails/'+book.id}>{book.get('title')}</a></td>	
+// 					<td>Quantity:{qty}</td>
+// 			        <td><button onClick={ this.removeBook.bind(this, book) }>Remove</button></td>
+// 		     	 </tr><hr />
+
+// 	        <div id={book.id}>       
+// 		      	<tr class="warning">
+// 			        <td><a href={'#bookDetails/'+book.id}>{book.get('title')}</a></td>	
+// 					<td>Quantity:{qty}</td>
+// 			        <td><button onClick={ this.removeBook.bind(this, book) }>Remove</button></td>
+// 		     	 </tr><hr />
+// 		    </div>

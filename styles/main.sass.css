@@ -1,5 +1,5 @@
 @import url(../node_modules/bootstrap/dist/css/bootstrap.css);
-body, h1, h2, p {
+body, h1, h2, h3, p {
   margin: 0;
   padding: 0;
   font-family: "Raleway", sans-serif; }
@@ -161,9 +161,6 @@ div.registerBox {
 .panel-pricing:hover {
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2); }
 
-.panel-pricing .panel-heading {
-  padding: 20px 10px; }
-
 .panel-pricing .panel-heading .fa {
   margin-top: 10px;
   font-size: 58px; }
@@ -266,7 +263,8 @@ header {
     margin-right: 1em; }
 
 #browseBooks {
-  text-align: center; }
+  text-align: center;
+  margin-top: 2em; }
 
 .detailsAuthor {
   padding-top: 20px; }
@@ -293,11 +291,12 @@ header {
     margin-bottom: 3em; }
 
 .checkoutCart {
-  margin: 0 auto;
-  margin-top: 3em; }
-  .checkoutCart li {
-    list-style: none;
-    margin: 0; }
+  margin-top: 3em;
+  border: 2px solid black;
+  background: white;
+  text-align: center; }
+  .checkoutCart th {
+    text-align: center; }
   .checkoutCart button {
     background: #FF6A44;
     border: none;
@@ -305,9 +304,14 @@ header {
     height: 2em;
     width: 10em;
     outline-color: #FF6A44;
-    color: white; }
+    color: black; }
   .checkoutCart #shipBtn {
-    margin-left: 30%; }
+    width: 90%;
+    height: 3em;
+    margin: 1em 5% 1em 5%;
+    background: #F5D76E; }
+  .checkoutCart .needs-padding {
+    padding-top: 8em; }
 
 .btn-danger, .btn-warning {
   border-radius: 0; }
@@ -332,3 +336,6 @@ hr {
   text-align: center; }
   .confirmation-page img {
     text-align: center; }
+
+.empty-cart h3 {
+  text-align: center; }

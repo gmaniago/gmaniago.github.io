@@ -31962,7 +31962,7 @@ module.exports = React.createClass({
 					),
 					React.createElement(
 						'div',
-						{ className: 'panel panel-warning panel-pricing' },
+						{ className: 'panel panel-danger panel-pricing' },
 						React.createElement(
 							'div',
 							{ className: 'panel-heading' },
@@ -32086,78 +32086,84 @@ module.exports = React.createClass({
 				return cur.get('qty') + sum;
 			}, 0);
 			placements.push(React.createElement(
-				'div',
-				{ id: book.id },
+				'tr',
+				{ id: book.id, className: 'warning' },
 				React.createElement(
-					'ul',
+					'td',
 					null,
-					React.createElement(
-						'li',
-						null,
-						React.createElement(
-							'a',
-							{ href: '#bookDetails/' + book.id },
-							book.get('title')
-						)
-					),
+					React.createElement('img', { className: 'image', src: book.get('image'), height: '120px', width: '80px' }),
 					React.createElement('br', null),
 					React.createElement(
-						'li',
-						null,
-						'Quantity:',
-						qty
-					),
-					React.createElement('br', null),
-					React.createElement(
-						'li',
-						null,
-						React.createElement(
-							'button',
-							{ onClick: this.removeBook.bind(this, book) },
-							'Remove'
-						)
+						'a',
+						{ href: '#bookDetails/' + book.id },
+						book.get('title')
 					)
 				),
-				React.createElement('hr', null)
+				React.createElement(
+					'td',
+					{ className: 'needs-padding' },
+					React.createElement(
+						'h3',
+						null,
+						qty
+					)
+				),
+				React.createElement(
+					'td',
+					{ className: 'needs-padding' },
+					React.createElement(
+						'button',
+						{ onClick: this.removeBook.bind(this, book) },
+						'Remove'
+					)
+				)
 			));
 		}
 		var enableShipping = placements.length > 0;
 		return React.createElement(
 			'div',
-			{ className: 'checkoutCart' },
+			{ className: 'container-fluid col-sm-6 col-sm-offset-3 checkoutCart' },
 			React.createElement(
-				'div',
-				{ className: 'col-sm-4 col-sm-offset-2' },
+				'h2',
+				null,
+				'Cart'
+			),
+			React.createElement(
+				'table',
+				{ className: 'table' },
 				React.createElement(
-					'div',
-					{ className: 'panel panel-danger panel-pricing' },
+					'thead',
+					null,
 					React.createElement(
-						'div',
-						{ className: 'panel-heading' },
-						React.createElement('i', { className: 'fa fa-desktop' }),
+						'tr',
+						null,
 						React.createElement(
-							'h3',
-							{ className: 'text-center' },
-							'Ready to get these on your hands!'
-						)
-					),
-					React.createElement(
-						'div',
-						{ className: 'list-group' },
+							'th',
+							null,
+							'Title'
+						),
 						React.createElement(
-							'div',
-							{ className: 'list-group-item' },
-							React.createElement('i', { className: 'fa fa-check' }),
-							placements
+							'th',
+							null,
+							'Quantity'
+						),
+						React.createElement(
+							'th',
+							null,
+							'Edit'
 						)
 					)
+				),
+				React.createElement(
+					'tbody',
+					null,
+					placements
 				)
 			),
 			React.createElement(
 				'div',
-				{ className: 'col-sm-6' },
-				this.shippingButton(enableShipping),
-				React.createElement('br', null)
+				null,
+				this.shippingButton(enableShipping)
 			)
 		);
 	},
@@ -32170,9 +32176,22 @@ module.exports = React.createClass({
 			);
 		} else {
 			return React.createElement(
-				'button',
-				{ onClick: this.shipCart, id: 'shipBtn', disabled: true },
-				'Ship my Books'
+				'div',
+				{ className: 'empty-cart' },
+				React.createElement(
+					'h3',
+					null,
+					'You have no books on your cart yet.'
+				),
+				React.createElement(
+					'a',
+					{ href: '#browse' },
+					React.createElement(
+						'button',
+						{ id: 'shipBtn' },
+						'Browse Books'
+					)
+				)
 			);
 		}
 	},
@@ -32216,6 +32235,23 @@ module.exports = React.createClass({
 	}
 
 });
+
+// <div>{this.shippingButton(enableShipping)}</div>
+// {placements}
+
+// <tr class="warning">
+// 			        <td><a href={'#bookDetails/'+book.id}>{book.get('title')}</a></td>	
+// 					<td>Quantity:{qty}</td>
+// 			        <td><button onClick={ this.removeBook.bind(this, book) }>Remove</button></td>
+// 		     	 </tr><hr />
+
+// 	        <div id={book.id}>      
+// 		      	<tr class="warning">
+// 			        <td><a href={'#bookDetails/'+book.id}>{book.get('title')}</a></td>	
+// 					<td>Quantity:{qty}</td>
+// 			        <td><button onClick={ this.removeBook.bind(this, book) }>Remove</button></td>
+// 		     	 </tr><hr />
+// 		    </div>
 
 },{"../models/BooksModel":172,"../models/CartPlacementModel.js":173,"../models/ShipmentModel.js":174,"../models/UserModel":175,"jquery":4,"react":160,"react-dom":5}],165:[function(require,module,exports){
 'use strict';

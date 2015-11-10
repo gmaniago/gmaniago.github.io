@@ -90,7 +90,7 @@ module.exports = React.createClass({
 								{this.state.categories}
 							</select>
 						</div>
-						<div className="panel panel-warning panel-pricing">
+						<div className="panel panel-danger panel-pricing">
 						    <div className="panel-heading">
 						        <i className="fa fa-desktop"></i>
 						        <h3 className="text-center">Staff Picks</h3>

@@ -10,7 +10,7 @@ $formBackground: #F5D76E;
 $greyFont: #919191;
 
 
-body, h1, h2, p{
+body, h1, h2, h3,p{
 	margin: 0;
 	padding: 0;
 	font-family: $fontFamily;
@@ -196,9 +196,9 @@ div.registerBox{
 .panel-pricing:hover {
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
 }
-.panel-pricing .panel-heading {
-  padding: 20px 10px;
-}
+// .panel-pricing .panel-heading {
+//   padding: 10px 10px;
+// }
 .panel-pricing .panel-heading .fa {
   margin-top: 10px;
   font-size: 58px;
@@ -241,10 +241,6 @@ div.registerBox{
 	.image-container {
 		text-align: center;
 	}
-	// img{
-	// 	text-align: center;
-	// 	box-sizing: border-box;
-	// }
 	.descript {
 		font-size: 1.3em;
 	}
@@ -291,7 +287,6 @@ header {
 
 //Browse books styling here
 
-
 .filter-container {
 	margin: 0 auto;
 	margin-top: .5em;
@@ -332,6 +327,7 @@ header {
 
 #browseBooks {
 	text-align: center;
+	margin-top:2em;
 }
 .detailsAuthor {
 padding-top:20px;
@@ -366,11 +362,12 @@ padding-top:20px;
 // cart details start here
 
 .checkoutCart {
-	margin: 0 auto;
 	margin-top: 3em;
-	li {
-		list-style: none;
-		margin: 0;
+	border: 2px solid black;
+	background: white;
+	text-align: center;
+	th {
+		text-align: center;
 	}
 	button {
 		background: $buttonBackground;
@@ -379,10 +376,16 @@ padding-top:20px;
 		height: 2em;
 		width: 10em;
 		outline-color: $buttonBackground;
-		color: white;
+		color: black;
 	}
 	#shipBtn {
-		margin-left: 30%;
+		width: 90%;
+		height: 3em;
+		margin: 1em 5% 1em 5%;
+		background: $background-color;
+	}
+	.needs-padding {
+		padding-top: 8em;
 	}
 }
 
@@ -413,6 +416,12 @@ hr {
 	margin-top: 3em;
 	text-align: center;
 	img {
+		text-align: center;
+	}
+}
+
+.empty-cart {
+	h3 {
 		text-align: center;
 	}
 }
