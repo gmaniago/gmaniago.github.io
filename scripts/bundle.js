@@ -31703,6 +31703,8 @@ module.exports = warning;
 module.exports = require('./lib/React');
 
 },{"./lib/React":29}],161:[function(require,module,exports){
+//add book component is not seen by the user. Administrator is able to add books to the collection/Parse.com database using this form
+
 'use strict';
 
 var React = require('react');

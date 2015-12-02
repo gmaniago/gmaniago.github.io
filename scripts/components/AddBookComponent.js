@@ -1,3 +1,5 @@
+//add book component is not seen by the user. Administrator is able to add books to the collection/Parse.com database using this form
+
 var React = require('react');
 var ReactDOM = require('react-dom');
 var BooksModel = require('../models/BooksModel.js');
