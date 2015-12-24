@@ -1,0 +1,356 @@
+/* Global Styles */
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Dosis', sans-serif;
+}
+
+hr {
+  margin: 0 auto;
+}
+.vert-text {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: white;
+  font-family: 'Dosis', sans-serif;
+}
+
+.header_name{
+  letter-spacing: .7em;
+  font-weight: 200;
+}
+
+.header_title {
+  letter-spacing: .1em;
+  font-weight: 200;
+}
+
+
+#about {
+  padding: 4em 6em 8em 6em; 
+}
+
+#about h3 {
+  color: black;
+  font-weight: 200;
+  letter-spacing: .1em;
+  padding: 0;
+}
+
+.p_about{
+  font-size: 1.2em;
+  padding-bottom: 2em;
+  color: #696969;
+  font-weight: 200;
+}
+
+#quote {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #696969;
+  font-size: 1.7em;
+  font-weight: 200;
+  margin: 0 auto;
+}
+
+#disney {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #696969;
+}
+
+.vert-text h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 4em;
+  font-family: 'Dosis', sans-serif;
+}
+
+h3, h2, h4, h5{
+  font-family: 'Dosis', sans-serif;
+}
+
+dd {
+  color: #696969;
+}
+
+/*Skills*/
+
+.skills {
+  background: #515265;
+  color: #F2F2F2;
+  padding: 4em 3em;
+}
+
+.skills h3{
+  font-weight: 200;
+}
+
+.skills dt {
+  font-weight: 200;
+}
+
+.skills dd {
+  color: #F2F2F2;
+  font-weight: 200;
+}
+
+.long-word {
+  white-space: nowrap;
+}
+
+.list-inline > li {
+  vertical-align: middle;
+}
+
+.vert-text .list-inline a {
+  color: white;
+}
+
+.resume {
+  margin: 0px 0px 20px 0px;
+  font-size: 1.3em;
+  text-decoration: none;
+}
+
+/* Side Menu */
+
+#sidebar-wrapper {
+  margin-right: -250px;
+  right: 0;
+  width: 250px;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  height: 220px;
+  border-bottom-left-radius: 20px;
+  overflow-y: auto;
+  z-index: 1000;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-nav li {
+  line-height: 40px;
+  text-indent: 20px;
+}
+
+.sidebar-nav li a {
+  color: #F3EEEE;
+  display: block;
+  text-decoration: none;
+}
+
+.sidebar-nav li a:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.2);
+  text-decoration: none;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+  height: 55px;
+  line-height: 55px;
+  font-size: 18px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: #F3EEEE;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+#menu-toggle {
+  top: 0;
+  right: 0;
+  position: fixed;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+}
+
+#sidebar-wrapper.active {
+  right: 250px;
+  width: 250px;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.toggle {
+  border-radius: 0 0 0 4px;
+}
+
+/* Full Page Image Header Area */
+
+.header {
+  display: table;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/red-rock3.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.portfolio-piece {
+  padding: 1em 3em 0 3em;
+  letter-spacing: .1em;
+}
+
+.portfolio-piece h4 {
+  color:#696969;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+}
+
+.portfolio-piece h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+}
+
+/* Call to Action */
+.call-to-action .btn {
+  margin: 10px;
+}
+
+.call-to {
+  text-shadow: none;
+  background: transparent;
+  border-radius: 1px;
+  border: 2px solid white;
+  border-opacity: .1;
+  color: #ffffff;
+}
+
+.resume-banner{
+  background: #76C8B7;
+  padding-top: 7em;
+  padding-right: 5em;
+  padding-left: 5em;
+  color: #FCFCFC;
+  height: 20em;
+  letter-spacing: .15em;
+}
+
+.resume-banner h3 {
+  font-weight: 200;
+}
+
+.resume-banner a {
+  border: 2px solid #FCFCFC;
+  color: #FCFCFC;
+  letter-spacing: .1em;
+  font-weight: 200;
+}
+/*Find out more*/
+
+li {
+  list-style: none;
+}
+
+/* Map */
+
+.map {
+  height: 500px;
+}
+
+/* Footer */
+
+.bottom_banner {
+  background: #515265;
+  max-width: 100%;
+  color: white;
+  padding-top: 5em;
+  font-weight: 200;
+}
+
+.footer > p{
+  font-size: 40px;
+  color: #ffffff;
+  letter-spacing: .2em;
+}
+
+.top-scroll {
+  margin-top: 50px;
+}
+
+.top-scroll a {
+  text-decoration: none;
+  color: inherit;
+}
+
+i.scroll {
+  color: #333333;
+}
+
+i.scroll:hover {
+  color: #0a5175;
+}
+
+.fa_black {
+  color: white;
+}
+
+.fa-angle-up{
+  color: white;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .map {
+	height: 75%;
+  }
+
+  .resume.space-m {
+    margin: 35px;
+  }
+
+  .call-to {
+    margin-bottom: 35px;
+  }
+}
+
+.spaced {
+  margin:35px;
+}
+
+.block {
+  display:block;
+}
+
+.size-m {
+  font-size: 1.5em
+}
+
+.shy-a, .shy-a:hover {
+  color:inherit;
+}
+
+
+
