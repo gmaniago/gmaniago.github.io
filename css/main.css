@@ -30,7 +30,7 @@ hr {
 
 
 #about {
-  padding: 4em 6em 8em 6em; 
+  padding: 5%; 
 }
 
 #about h3 {
@@ -80,7 +80,7 @@ dd {
 .skills {
   background: #515265;
   color: #F2F2F2;
-  padding: 4em 3em;
+  padding: 3%;
 }
 
 .skills h3{
@@ -232,6 +232,16 @@ dd {
   font-weight: 200;
 }
 
+.portfolio-pic {
+  padding: 2%;
+}
+
+.work {
+  padding-top: 3%;
+  padding-bottom: 2%;
+  font-weight: 200;
+}
+
 /* Call to Action */
 .call-to-action .btn {
   margin: 10px;
@@ -248,9 +258,7 @@ dd {
 
 .resume-banner{
   background: #76C8B7;
-  padding-top: 7em;
-  padding-right: 5em;
-  padding-left: 5em;
+  padding: 5%;
   color: #FCFCFC;
   height: 20em;
   letter-spacing: .15em;
