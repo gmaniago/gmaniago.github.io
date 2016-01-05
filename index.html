@@ -18,7 +18,7 @@
 <body>
     <!-- Side Menu -->
     <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="fa fa-reorder"></i></a>
-    <div id="sidebar-wrapper">
+    <navbar id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle" onClick="ga('send', '_trackEvent', 'Navbar', 'Toggle', 'Navbar toggle');"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand"><a href="#top">Gladys Maniago</a>
@@ -32,11 +32,11 @@
             <li><a href="resume.html" onClick="ga('send', '_trackEvent', 'Navbar', 'Contact');">Resume</a>
             </li>
         </ul>
-    </div>
+    </navbar>
     <!-- /Side Menu -->
 
     <!-- Full Page Image Header Area -->
-    <div id="top" class="header">
+    <header id="top" class="header">
         <div class="vert-text">
             <div class="expandUp">
                 <h1 class="header_name">
@@ -51,14 +51,13 @@
                 </li>
                 <li><a href="mailto:gfdmaniago@gmail.com" title="Email me" alt="Email me" target="_blank" onClick="ga('send', '_trackEvent', 'Links', 'Email', 'Email top');"><i class="fa fa-envelope-o fa-3x"></i></a>
                 </li>
-<!--                 <li><a href="resume.pdf" target="_blank" class="resume space-m" onClick="ga('send', '_trackEvent', 'Links', 'Resume', 'Resume top');">Resumé</a>
-                </li> -->
+                <li><a href="resume.html" target="_blank" class="resume space-m" onClick="ga('send', '_trackEvent', 'Links', 'Resume', 'Resume top');">Resumé</a>
+                </li>
             </ul>
             <a href="#about" class="btn btn-default btn-lg call-to about-btn" onClick="ga('send', '_trackEvent', 'Links', 'What else');">About Me</a>
 
         </div>
-
-    </div>
+    </header>
     <!-- /Full Page Image Header Area -->
 
     <!-- Intro -->
@@ -95,9 +94,8 @@
                 </dl>
             </div>
         </div>
-</section>
-<!--         <div class="text-center"><a href="#contact" onClick="ga('send', '_trackEvent', 'Links', 'See more');">Contact <i class="fa fa-level-down"></i></a></div> -->
-    </div>
+    </section>
+
     <!-- /Intro -->
     <div class="call-to-action">
         <div class="container">
@@ -108,7 +106,7 @@
         </div>
     </div>
     <!-- Portfolio -->
-    <div class="callout">
+    <section class="callout">
          <div class="container-fluid">
             <h2 class="text-center work">SOME OF MY WORK</h2>
             <div class="row">
@@ -145,13 +143,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- /Portfolio -->
     
 
     <!-- Findoutmore -->
     <div id="contact" class="call-to-action">
-
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center">
@@ -160,42 +157,39 @@
         </div>
     </div>
     <!-- /Findoutmore -->
-    <div class="text-center resume-banner col-md-12">
+    <section class="text-center resume-banner col-md-12">
         <h3>My venture into Front-End Engineering has been great so far and am looking forward to the things I can learn, teach and create. Let's talk.</h3>
       <!--   <img src="img/gladysmaniagocartoon.jpg"> -->
         <a href="resume.html" target="_blank" class="btn btn-md resume toSlideDown" onClick="ga('send', '_trackEvent', 'Links', 'Resume', 'Resume bottom');">Resumé</a>
-    </div>
+    </section>
     <!-- Footer -->
-    <footer>
-
-        <div class="container bottom_banner">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3 text-center footer">
-                    <ul class="list-inline">
-                        <li><a href="https://github.com/gmaniago" target="_blank" title="Github" alt="Github" onClick="ga('send', '_trackEvent', 'Links', 'Github', 'Github bottom');"><i class=" fa_black fa fa-github-square fa-2x"></i></a>
-                        </li>
-                        <li><a href="http://gmaniago.tumblr.com/" target="_blank" title="Tumblr" alt="Tumblr" onClick="ga('send', '_trackEvent', 'Links', 'Tumblr', 'Tumblr bottom');"><i class=" fa_black fa fa-tumblr-square fa-2x"></i></a>
-                        </li>
-                        <li><a href="https://twitter.com/gfmaniago" target="_blank" title="Twitter" alt="Twitter" onClick="ga('send', '_trackEvent', 'Links', 'Twitter', 'Twitter bottom');"><i class=" fa_black fa fa-twitter-square fa-2x"></i></a>
-                        </li>
-                        <li><a href="https://www.linkedin.com/in/gladys-maniago-1a591749" target="_blank" title="LinkedIn" alt="LinkedIn" onClick="ga('send', '_trackEvent', 'Links', 'LinkedIn', 'LinkedIn bottom');"><i class="fa_black fa fa-linkedin-square fa-2x"></i></a>
-                        </li>
-                    </ul>
-                    <ul class="list-unstyled size-m">
-                        <li><i class="fa fa-map-marker"></i> LAS VEGAS, NEVADA</li>
-                        <li><i class="fa fa-envelope-o"></i> <a href="mailto:gfdmaniago@gmail.com" target="_blank" onClick="ga('send', '_trackEvent', 'Links', 'Email', 'Email bottom');">gfdmaniago@gmail.com</a>
-                        </li>
-                    </ul>
-                    <div class="top-scroll">
-                        <a href="#top" title="Back to top" alt="Back to top"><i class="fa fa-caret-up scroll fa-4x"></i></a>
-                    </div>
-                    <span>Like the website? <a href="https://github.com/gmaniago" target="_blank" class="long-word" onClick="ga('send', '_trackEvent', 'Links', 'Fork it');">View it on GitHub</a>
-                    </span>
+    <footer class="container bottom_banner">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center footer">
+                <ul class="list-inline">
+                    <li><a href="https://github.com/gmaniago" target="_blank" title="Github" alt="Github" onClick="ga('send', '_trackEvent', 'Links', 'Github', 'Github bottom');"><i class=" fa_black fa fa-github-square fa-2x"></i></a>
+                    </li>
+                    <li><a href="http://gmaniago.tumblr.com/" target="_blank" title="Tumblr" alt="Tumblr" onClick="ga('send', '_trackEvent', 'Links', 'Tumblr', 'Tumblr bottom');"><i class=" fa_black fa fa-tumblr-square fa-2x"></i></a>
+                    </li>
+                    <li><a href="https://twitter.com/gfmaniago" target="_blank" title="Twitter" alt="Twitter" onClick="ga('send', '_trackEvent', 'Links', 'Twitter', 'Twitter bottom');"><i class=" fa_black fa fa-twitter-square fa-2x"></i></a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/gladys-maniago-1a591749" target="_blank" title="LinkedIn" alt="LinkedIn" onClick="ga('send', '_trackEvent', 'Links', 'LinkedIn', 'LinkedIn bottom');"><i class="fa_black fa fa-linkedin-square fa-2x"></i></a>
+                    </li>
+                </ul>
+                <ul class="list-unstyled size-m">
+                    <li><i class="fa fa-map-marker"></i> LAS VEGAS, NEVADA</li>
+                    <li><i class="fa fa-envelope-o"></i> <a href="mailto:gfdmaniago@gmail.com" target="_blank" onClick="ga('send', '_trackEvent', 'Links', 'Email', 'Email bottom');">gfdmaniago@gmail.com</a>
+                    </li>
+                </ul>
+                <div class="top-scroll">
+                    <a href="#top" title="Back to top" alt="Back to top"><i class="fa fa-caret-up scroll fa-4x"></i></a>
                 </div>
+                <span>Like the website? <a href="https://github.com/gmaniago" target="_blank" class="long-word" onClick="ga('send', '_trackEvent', 'Links', 'Fork it');">View it on GitHub</a>
+                </span>
             </div>
         </div>
     </footer>
-    <!-- /Footer -->
+<!-- /Footer -->
 
     <script src="js/jquery.js"></script>
     <script src="js/jquery.scrolldepth.min.js"></script>
