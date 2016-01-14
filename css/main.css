@@ -36,12 +36,13 @@ hr {
 #about h3 {
   color: black;
   font-weight: 200;
+  font-size: 2.1em;
   letter-spacing: .1em;
   padding: 0;
 }
 
 .p_about{
-  font-size: 1.2em;
+  font-size: 1.4em;
   padding-bottom: 2em;
   color: #696969;
   font-weight: 200;
@@ -80,11 +81,12 @@ dd {
 .skills {
   background: #515265;
   color: #F2F2F2;
-  padding: 3%;
+  padding: 4%;
 }
 
 .skills h3{
   font-weight: 200;
+  font-size: 2.1em;
 }
 
 .skills dt {
@@ -117,12 +119,13 @@ dd {
 /* Side Menu */
 
 #sidebar-wrapper {
+  font-size: 20px;
   margin-right: -250px;
   right: 0;
   width: 250px;
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
-  height: 220px;
+  height: 170px;
   border-bottom-left-radius: 20px;
   overflow-y: auto;
   z-index: 1000;
