@@ -14,8 +14,14 @@ hr {
     color: white;
     font-family: 'Dosis', sans-serif;
 }
+.vert-text h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 3em;
+    font-family: 'Dosis', sans-serif;
+}
 .header_name {
-    letter-spacing: .7em;
+    letter-spacing: .8em;
     font-weight: 200;
 }
 .header_title {
@@ -49,12 +55,7 @@ hr {
     font-family: 'Source Sans Pro', sans-serif;
     color: #696969;
 }
-.vert-text h1 {
-    padding: 0;
-    margin: 0;
-    font-size: 4em;
-    font-family: 'Dosis', sans-serif;
-}
+
 h3,
 h2,
 h4,
@@ -294,3 +295,8 @@ i.scroll:hover {
 .shy-a:hover {
     color: inherit;
 }
+
+
+
+
+
